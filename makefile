@@ -42,4 +42,4 @@ $(HashBuildDir)/hash.o:
 
 .PHONY: init
 init:
-	mkdir $(BuildDir)
+	mkdir -p $(BuildDir)
