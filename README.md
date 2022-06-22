@@ -1,5 +1,6 @@
 # Secured Stack implementation
-Implementation of [`stack`](https://en.wikipedia.org/wiki/Stack_(abstract_data_type)) data structure with several levels of protection. Second task in MIPT in the first year of education.
+Implementation of [`stack`](https://en.wikipedia.org/wiki/Stack_(abstract_data_type)) data structure with several levels of protection.  
+Second task in MIPT in the first year of education.
 
 ## Motivation
 Imagine that there is a "bad guy" who wants to hack your program, go outside the array (we assume that there are no protections in the system) and get access to confidential data. As programmers, we want to prevent this. That is why the idea of this project is to understand the intricacies of ***basic*** methods of stack protection.
