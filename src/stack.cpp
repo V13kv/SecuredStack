@@ -4,8 +4,8 @@
 #include <string.h>
 #include <math.h>
 
-#include "../include/settings.h"
-#include "../include/stack.h"
+#include "include/settings.h"
+#include "include/stack.h"
 
 #ifndef STACK_HASH
     #define STACK_HASH  1
@@ -16,7 +16,7 @@
 #endif
 
 #if defined(STACK_HASH) && STACK_HASH == 1
-    #include "../libs/hash/include/hash.h"
+    #include "libs/hash/include/hash.h"
 #endif
 
 #ifdef STACK_ELEMENT_DUMP_FMT_STR

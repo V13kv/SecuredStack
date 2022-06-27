@@ -20,7 +20,7 @@ LibDir = ../
 DebugDir = $(LibDir)/debug
 
 all:
-	g++ -c $(SrcDir)/hash.cpp $(CXXFLAGS) -o $(BinDir)/hash.o
+	g++ -I$(LibDir)/.. -I$(IncDir)/.. -c $(SrcDir)/hash.cpp $(CXXFLAGS) -o $(BinDir)/hash.o
 
 .PHONY: init
 init:

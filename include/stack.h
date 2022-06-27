@@ -5,8 +5,8 @@
 #include <stdbool.h>
 
 #define DEBUG_LEVEL 2
-#include "../libs/debug/debug.h"
-#include "settings.h"
+#include "libs/debug/debug.h"
+#include "include/settings.h"
 
 #ifndef STACK_CANARY
     #define STACK_CANARY 0

@@ -4,7 +4,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#include "../colors/colors.h"
+#include "libs/colors/colors.h"
 
 #define DEFAULT_ERROR_TRACING_STREAM    stderr
 
@@ -94,6 +94,7 @@ enum class EXIT_CODES
     #define OBJECT_VERIFY(object, type)
     #define CHECK_SSCANF_RESULT(ret)
     #define CHECK_FSEEK_RESULT(ret)
+    #define VALUE_CODE_TO_STR(expression)           "0"
 
 #endif
 

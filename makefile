@@ -27,13 +27,13 @@ HashIncDir = $(LibDir)/hash/include
 OBJECTS = $(BuildDir)/main.o $(BuildDir)/stack.o $(HashBuildDir)/hash.o
 
 stack.exe: $(OBJECTS)
-	g++ $(OBJECTS) -o stack.exe
+	g++ -I$(IncDir)/.. -I$(LibDir)/.. $(OBJECTS) -o stack.exe
 
 $(BuildDir)/main.o: $(SrcDir)/main.cpp $(IncDir)/stack.h $(DebugDir)/debug.h $(IncDir)/settings.h $(ColorsDir)/colors.h
-	g++ -c $(SrcDir)/main.cpp $(CXXFLAGS) -o $(BuildDir)/main.o
+	g++ -I$(IncDir)/.. -I$(LibDir)/.. -c $(SrcDir)/main.cpp $(CXXFLAGS) -o $(BuildDir)/main.o
 
 $(BuildDir)/stack.o: $(SrcDir)/stack.cpp $(IncDir)/stack.h $(DebugDir)/debug.h $(IncDir)/settings.h $(LibDir)/hash/include/hash.h
-	g++ -c $(SrcDir)/stack.cpp $(CXXFLAGS) -o $(BuildDir)/stack.o
+	g++ -I$(IncDir)/.. -I$(LibDir)/.. -c $(SrcDir)/stack.cpp $(CXXFLAGS) -o $(BuildDir)/stack.o
 
 $(HashBuildDir)/hash.o: 
 	"$(MAKE)" -C "./$(LibDir)/hash/" makefile all

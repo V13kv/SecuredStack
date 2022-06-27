@@ -1,5 +1,5 @@
-#include "../../debug/debug.h"
-#include "../include/hash.h"
+#include "libs/debug/debug.h"
+#include "include/hash.h"
 
 EXIT_CODES calculateHashSum(void *object, unsigned long long int size, long long int *hashSum)
 {
