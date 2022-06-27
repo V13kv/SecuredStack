@@ -36,7 +36,7 @@ $(BuildDir)/stack.o: $(SrcDir)/stack.cpp $(IncDir)/stack.h $(DebugDir)/debug.h $
 	g++ -I$(IncDir)/.. -I$(LibDir)/.. -c $(SrcDir)/stack.cpp $(CXXFLAGS) -o $(BuildDir)/stack.o
 
 $(HashBuildDir)/hash.o: 
-	"$(MAKE)" -C "./$(LibDir)/hash/" makefile all
+	"$(MAKE)" -C "./$(LibDir)/hash/" makefile init all
 
 .PHONY: init
 init:
