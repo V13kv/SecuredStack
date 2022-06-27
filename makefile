@@ -12,8 +12,6 @@ CXXFLAGS = -g -std=c++17 -Wall -Wextra -Weffc++ -Wc++0x-compat -Wc++11-compat -W
 -Wshadow=global -Wsuggest-attribute=malloc -fcheck-new -fsized-deallocation -fstack-check -fstrict-overflow \
 -flto-odr-type-merging -fno-omit-frame-pointer -Wno-unknown-pragmas
 
-ProjectPath = C:\Users\gold4\Desktop\MIPT-main\First Course\First Semester\Dedinsky Course\Stack
-
 SrcDir = src
 IncDir = include
 LibDir = libs
