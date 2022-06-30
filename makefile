@@ -12,10 +12,11 @@ CXXFLAGS = -g -std=c++17 -Wall -Wextra -Weffc++ -Wc++0x-compat -Wc++11-compat -W
 -Wshadow=global -Wsuggest-attribute=malloc -fcheck-new -fsized-deallocation -fstack-check -fstrict-overflow \
 -flto-odr-type-merging -fno-omit-frame-pointer -Wno-unknown-pragmas
 
-SrcDir = src
-IncDir = include
-LibDir = libs
-BuildDir = build
+SrcDir 		= src
+IncDir 		= include
+LibDir 		= libs
+BuildDir 	= build
+ExmplsDir 	= examples
 
 ColorsDir = $(LibDir)/colors
 DebugDir = $(LibDir)/debug
@@ -26,11 +27,11 @@ HashIncDir = $(LibDir)/hash/include
 
 OBJECTS = $(BuildDir)/main.o $(BuildDir)/stack.o $(HashBuildDir)/hash.o
 
-stack.exe: $(OBJECTS)
+all: $(OBJECTS)
 	g++ -I$(IncDir)/.. -I$(LibDir)/.. $(OBJECTS) -o stack.exe
 
-$(BuildDir)/main.o: $(SrcDir)/main.cpp $(IncDir)/stack.h $(DebugDir)/debug.h $(IncDir)/settings.h $(ColorsDir)/colors.h
-	g++ -I$(IncDir)/.. -I$(LibDir)/.. -c $(SrcDir)/main.cpp $(CXXFLAGS) -o $(BuildDir)/main.o
+$(BuildDir)/main.o: $(ExmplsDir)/main.cpp $(IncDir)/stack.h $(DebugDir)/debug.h $(IncDir)/settings.h $(ColorsDir)/colors.h
+	g++ -I$(IncDir)/.. -I$(LibDir)/.. -c $(ExmplsDir)/main.cpp $(CXXFLAGS) -o $(BuildDir)/main.o
 
 $(BuildDir)/stack.o: $(SrcDir)/stack.cpp $(IncDir)/stack.h $(DebugDir)/debug.h $(IncDir)/settings.h $(LibDir)/hash/include/hash.h
 	g++ -I$(IncDir)/.. -I$(LibDir)/.. -c $(SrcDir)/stack.cpp $(CXXFLAGS) -o $(BuildDir)/stack.o

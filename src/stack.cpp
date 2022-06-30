@@ -15,6 +15,14 @@
     #define STACK_CANARY  1
 #endif
 
+#ifndef stackReallocCoefficient
+    #define stackReallocCoefficient 2
+#endif
+
+#ifndef POISON
+    #define POISON  -663
+#endif
+
 #if defined(STACK_HASH) && STACK_HASH == 1
     #include "libs/hash/include/hash.h"
 #endif
@@ -42,7 +50,6 @@
         }
 
         // Canary construction
-        // FIXME: #3 stack crash if stack->data type is not int @V13kv
         int *canaryLeft = (int *) stack->data;
         *canaryLeft = CANARY_VALUE;
 

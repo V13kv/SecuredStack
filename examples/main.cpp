@@ -2,6 +2,7 @@
 #include <stdlib.h>
 
 #include "include/stack.h"
+#include "libs/debug/debug.h"
 
 int main(void)
 {
