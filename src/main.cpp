@@ -9,16 +9,16 @@ int main(void)
     stackCtor(&stack, 8);
 
     // --------------------------------------Normal test--------------------------------------------
-    // for (int i = 0; i < 20; ++i)
-    // {
-    //     IS_OK_W_EXIT(stackPush(&stack, i));
-    // }
-    // stackDump(&stack);
-    // for (int i = 0; i < 20; ++i)
-    // {
-    //     IS_OK_W_EXIT(stackPop(&stack));
-    // }
-    // stackDump(&stack);
+    for (int i = 0; i < 100; ++i)
+    {
+        IS_OK_W_EXIT(stackPush(&stack, 100-i));
+    }
+    stackDump(&stack);
+    for (int i = 0; i < 95; ++i)
+    {
+        IS_OK_W_EXIT(stackPop(&stack));
+    }
+    stackDump(&stack);
 
     // -----------------------------------Hash sum and canary test-----------------------------------
     // stack.data = (stackElem_t *) calloc(1, sizeof(stackElem_t));
