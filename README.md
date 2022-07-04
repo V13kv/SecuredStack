@@ -13,16 +13,16 @@ There are several layers of protections that can be turned on/off separately:
 ## Setting up
 **Clone the repository**
 ```
-$ git clone https://github.com/V13kv/SecuredStack
-$ cd SecuredStack
+git clone https://github.com/V13kv/SecuredStack;
+cd SecuredStack
 ```
 **Compiling**
 ```
-$ make init
-$ make
+make init;
+make
 ```
 
 ## Running
 ```
-$ ./stack.exe
+./stack.exe
 ```
