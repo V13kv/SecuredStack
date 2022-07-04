@@ -10,7 +10,19 @@ There are several layers of protections that can be turned on/off separately:
 1. [`Canaries`](https://en.wikipedia.org/wiki/Buffer_overflow_protection#Canaries:~:text=use%20their%20structures.-,Canaries,-%5Bedit%5D). Canaries are used to determine whether there is [`buffer overflow`](https://en.wikipedia.org/wiki/Buffer_overflow).
 2. [`Checksum`](https://en.wikipedia.org/wiki/Checksum). Checksum is used to determine whether there was some changes in data that were not expected.
 
-## Compiling && Running
+## Setting up
+**Clone the repository**
 ```
-make init; make; ./stack.exe
+$ git clone https://github.com/V13kv/SecuredStack
+$ cd SecuredStack
+```
+**Compiling**
+```
+$ make init
+$ make
+```
+
+## Running
+```
+$ ./stack.exe
 ```
