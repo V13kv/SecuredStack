@@ -1,0 +1,28 @@
+name: BuildAndTest
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+  schedule:
+  - cron: "0 2 * * 1-5"
+
+jobs:
+  build:
+
+    runs-on: ${{ matrix.os }}
+    
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+        node-version: [12.x]
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Initialize working directory
+        run: make init
+      - name: Compile files
+        run: make all
+      - name: Run tests
+        run: ./stack.exe
