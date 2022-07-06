@@ -1,4 +1,4 @@
-# Secured Stack implementation
+# Secured Stack implementation ![Build Status](https://github.com/V13kv/SecuredStack/workflows/BuildAndTest/badge.svg)
 Implementation of [`stack`](https://en.wikipedia.org/wiki/Stack_(abstract_data_type)) data structure with several levels of protection.  
 Second task in MIPT in the first year of education.
 
